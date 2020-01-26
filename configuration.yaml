@@ -37,6 +37,9 @@ device_tracker:
   - platform: fritz
     host: 192.168.178.1
     password: !secret fritzbox
+    interval_seconds: 5
+    consider_home: 60
+    track_new_devices: yes
 
 media_player:
   - platform: samsungtv
