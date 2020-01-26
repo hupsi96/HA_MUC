@@ -58,24 +58,6 @@ sensor:
       - 'time_date'
       - 'time_utc'
       - 'beat'
-  - platform: mvglive
-    nextdeparture:
-     - station: Fuggerstraße
-       name: Fuggerstraße - Harras
-       destinations: "Harras"
-       timeoffset: 2
-     - station: Fuggerstraße
-       name: Fuggerstraße - Heimeranplatz
-       destinations: "Heimeranplatz Süd"
-       timeoffset: 2
-     - station: Fuggerstraße
-       name: Fuggerstraße - BMW
-       destinations: "Am Hart"
-       timeoffset: 2
-     - station: Fuggerstraße
-       name: Fuggerstraße - CGI
-       destinations: "Spixstraße"
-       timeoffset: 2
 
 rest_command: !include rest_command.yaml
 group: !include groups.yaml
