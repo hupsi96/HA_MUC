@@ -1,12 +1,3 @@
-transport:
-  name: Transport
-  control: hidden
-  entities:
-    - sensor.fuggerstrasse_harras
-    - sensor.fuggerstrasse_heimeranplatz
-    - sensor.fuggerstrasse_cgi
-    - sensor.fuggerstrasse_bmw
-
 default_view:
   name: Home
   view: true
@@ -19,7 +10,6 @@ default_view:
     - sun.sun
     - weather.home
     - sensor.fritz_netmonitor
-    - group.transport
     
   
 motion_detection:
