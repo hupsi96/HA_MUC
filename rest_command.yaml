@@ -1,0 +1,65 @@
+my_request:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/14'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/5/state/presence","operator":"eq","value":"true"},{"address":"/sensors/5/state/presence","operator":"dx"},{"address":"/sensors/6/state/dark","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/sensors/22/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_night_1:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/25'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/sensors/30/state/presence","operator":"dx"},{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_night_2:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/26'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/sensors/31/state/dark","operator":"dx"},{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_night_3:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/27'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/sensors/30/state/presence","operator":"dx"},{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_night_4:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/28'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/sensors/31/state/dark","operator":"dx"},{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_night_5:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/29'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"false"},{"address":"/sensors/30/state/presence","operator":"ddx","value":"PT00:01:15"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/groups/5/state/any_on","operator":"eq","value":"true"}]}'
+  
+gang_request_night_6:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/30'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"false"},{"address":"/sensors/30/state/presence","operator":"ddx","value":"PT00:01:15"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/groups/5/state/any_on","operator":"eq","value":"true"}]}'
+  
+gang_request_day_1:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/25'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/sensors/30/state/presence","operator":"dx"},{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_day_2:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/26'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/sensors/31/state/dark","operator":"dx"},{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_day_3:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/27'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/sensors/30/state/presence","operator":"dx"},{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_day_4:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/28'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/31/state/dark","operator":"eq","value":"true"},{"address":"/sensors/31/state/dark","operator":"dx"},{"address":"/sensors/30/state/presence","operator":"eq","value":"true"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/sensors/51/state/status","operator":"lt","value":"1"}]}'
+  
+gang_request_day_5:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/29'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"false"},{"address":"/sensors/30/state/presence","operator":"ddx","value":"PT00:01:15"},{"address":"/config/localtime","operator":"in","value":"T{{ states.sensor.time.state}}:00/T07:00:00"},{"address":"/groups/5/state/any_on","operator":"eq","value":"true"}]}'
+  
+gang_request_day_6:
+  url: 'http://192.168.178.21/api/HNp8P9KneoF08EbK2PIg8qjIzP17qSgLsEo-VjZR/rules/30'
+  method: PUT
+  payload: '{"conditions":[{"address":"/sensors/30/state/presence","operator":"eq","value":"false"},{"address":"/sensors/30/state/presence","operator":"ddx","value":"PT00:01:15"},{"address":"/config/localtime","operator":"in","value":"T07:00:00/T{{ states.sensor.time.state}}:00"},{"address":"/groups/5/state/any_on","operator":"eq","value":"true"}]}'
+  

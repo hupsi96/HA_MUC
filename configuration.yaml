@@ -1,0 +1,85 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+
+http:
+  base_url: 'https://1n9cjmfsjljrwj776nv3ev2ncba9kf91.ui.nabu.casa'
+api:
+cloud:
+ios:
+# Text to speech
+tts:
+  - platform: google_translate
+
+zha_custom:
+zha:
+  usb_path: auto
+  database_path: /home/homeassistant/.homeassistant/zigbee.db
+
+# Example configuration.yaml entry
+input_boolean:
+  christian_nachtmodus:
+    name: Nachtmodus von Christian
+    initial: off
+    icon: mdi:weather-night
+  simon_nachtmodus:
+    name: Nachtmodus von Simon
+    initial: off
+    icon: mdi:weather-night
+  flo_nachtmodus:
+    name: Nachtmodus von Florian
+    initial: off
+    icon: mdi:weather-night
+
+device_tracker:
+  - platform: fritz
+    host: 192.168.178.1
+    password: !secret fritzbox
+
+media_player:
+  - platform: samsungtv
+    host: 192.168.178.32
+    port: 8001
+    mac: 'd0:d0:03:47:90:ba'
+  - platform: spotify
+    client_id: c28d3dfd73214e25889527d0f810c326
+    client_secret: f3ab9c2cbc9c450db8dc36c092caad86
+
+sensor:
+  - platform: fritzbox_netmonitor
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+  - platform: mvglive
+    nextdeparture:
+     - station: Fuggerstraße
+       name: Fuggerstraße - Harras
+       destinations: "Harras"
+       timeoffset: 2
+     - station: Fuggerstraße
+       name: Fuggerstraße - Heimeranplatz
+       destinations: "Heimeranplatz Süd"
+       timeoffset: 2
+     - station: Fuggerstraße
+       name: Fuggerstraße - BMW
+       destinations: "Am Hart"
+       timeoffset: 2
+     - station: Fuggerstraße
+       name: Fuggerstraße - CGI
+       destinations: "Spixstraße"
+       timeoffset: 2
+
+rest_command: !include rest_command.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+light: !include light.yaml

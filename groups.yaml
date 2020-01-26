@@ -1,0 +1,182 @@
+transport:
+  name: Transport
+  control: hidden
+  entities:
+    - sensor.fuggerstrasse_harras
+    - sensor.fuggerstrasse_heimeranplatz
+    - sensor.fuggerstrasse_cgi
+    - sensor.fuggerstrasse_bmw
+
+default_view:
+  name: Home
+  view: true
+  icon: mdi:home
+  entities:
+    - binary_sensor.remote_ui
+    - binary_sensor.updater
+    - persistent_notification.invalid_config
+    - group.motion_detection
+    - sun.sun
+    - weather.home
+    - sensor.fritz_netmonitor
+    - group.transport
+    
+  
+motion_detection:
+  name: Bewegungsmelder
+  control: hidden
+  entities:
+    - binary_sensor.hue_motion_sensor_1_motion
+    - sensor.hue_motion_sensor_1_light_level
+    - sensor.hue_motion_sensor_1_temperature
+
+wohnzimmer:
+  name: Wohnzimmer
+  entities:
+    - light.fado
+    - light.wohnzimmer_1
+    - light.wohnzimmer_2
+
+abstellkammer:
+  name: Abstellkammer
+  entities:
+    - light.abstellkammer
+
+christian_zimmer:
+  name: Christian's Zimmer
+  entities:
+    - light.kugel
+    - light.christian_2
+
+simon_zimmer:
+  name: Simon's Zimmer
+  entities:
+    - light.simon
+
+garderobe:
+  name: Gardarobe
+  entities:
+    - light.dimmable_light_1
+    - light.dimmable_light_1_2
+    - light.dimmable_light_3
+    - light.dimmable_light_2
+
+rooms:
+  name: Räume
+  view: true
+  entities:
+    - group.wohnzimmer
+    - group.abstellkammer
+    - group.christian_zimmer
+    - group.simon_zimmer
+    - group.garderobe
+
+media:
+  name: Multi-Media
+  view: true
+  entities:
+    - media_player.samsung_tv_remote
+    - media_player.wohnzimmer
+    - media_player.spotify
+
+christian_privat:
+  name: Christian Privat
+  control: hidden
+  entities:
+    - device_tracker.iphone_von_christian
+    - sensor.battery_level
+    - sensor.battery_state
+    - sensor.connection_type
+    - sensor.geocoded_location
+    - input_boolean.christian_nachtmodus
+
+christian_cgi:
+  name: Christian Arbeit
+  control: hidden
+  entities:
+    - device_tracker.christian_cgi
+    - sensor.battery_level_2
+    - sensor.battery_state_2
+    - sensor.connection_type_2
+    - sensor.geocoded_location_2
+    - input_boolean.christian_nachtmodus
+
+simon:
+  name: Simon
+  control: hidden
+  entities:
+    - device_tracker.simons_iphone
+    - sensor.battery_level_3
+    - sensor.battery_state_3
+    - sensor.connection_type_3
+    - sensor.geocoded_location_3
+    - input_boolean.simon_nachtmodus
+    
+florian:
+  name: Florian
+  control: hidden
+  entities:
+    - device_tracker.flos_iphone
+    - sensor.battery_level_4
+    - sensor.battery_state_4
+    - sensor.connection_type_4
+    - sensor.geocoded_location_4
+    - input_boolean.flo_nachtmodus
+
+personen:
+  name: Personen
+  view: true
+  entities:
+    - group.christian_privat
+    - group.christian_cgi
+    - group.simon
+    - group.florian
+
+presence_automation:
+  name: Standort Automationen
+  entities:
+    - automation.christian_coming_home_light
+    - automation.christian_coming_home_music
+    - automation.christian_leaving_home
+    - automation.florian_coming_home_light
+    - automation.florian_coming_home_music
+    - automation.florian_leaving_home
+    - automation.simon_coming_home_light
+    - automation.simon_coming_home_music
+    - automation.simon_leaving_home
+
+bewegung_automation:
+  name: Bewegungs Automationen
+  entities:
+    - automation.bewegung_garderobe
+    - automation.bewegung_gang
+
+
+automation:
+  name: Automation
+  view: true
+  entities:
+    - group.presence_automation
+    - group.bewegung_automation
+    - automation.christian_enter_door
+
+
+unused:
+  name: Papierkorb
+  view: true
+  entities:
+    - person.christian_huppertz
+    - sensor.activity
+    - sensor.average_active_pace
+    - sensor.bssid
+    - sensor.distance
+    - sensor.floors_ascended
+    - sensor.floors_descended
+    - sensor.last_update_trigger
+    - sensor.sim_1
+    - sensor.ssid
+    - sensor.steps
+    - sensor.bssid_2
+    - sensor.last_update_trigger_2
+    - sensor.sim_1_2
+    - sensor.ssid_2
