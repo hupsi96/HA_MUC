@@ -400,10 +400,9 @@
 - alias: 'Christian Enter Door'
   initial_state: true
   trigger:
-    platform: zone
+    platform: state
     entity_id: device_tracker.iphonevhristian
-    zone: zone.home
-    event: 'enter'
+    to: 'home'
   action:
     service: tts.google_translate_say
     entity_id: media_player.wohnzimmer
