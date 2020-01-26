@@ -3,7 +3,7 @@
 default_config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-
+# das ist ein neuer Branch - hoffe das klappt so :) 
 http:
   base_url: 'https://1n9cjmfsjljrwj776nv3ev2ncba9kf91.ui.nabu.casa'
 api:
