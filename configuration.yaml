@@ -16,7 +16,7 @@ tts:
 
 zha_custom:
 zha:
-  usb_path: auto
+  usb_path: /dev/ttyACM0
   database_path: /home/homeassistant/.homeassistant/zigbee.db
 
 # Example configuration.yaml entry
